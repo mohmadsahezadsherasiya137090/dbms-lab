@@ -1,0 +1,32 @@
+Assignment 1
+
+1. Describe deposit, branch from deposit table.
+ANS: desc deposit;
+
+2. Describe borrow, customers tables.
+ANS: desc borrow
+ANS: desc customers 
+
+3. List all data from table DEPOSIT.
+ANS: select * from DEPOSIT;
+
+4. List all data from table BORROW.
+ANS: select * from BORROW;
+
+5. List all data from table CUSTOMERS.
+ANS: select * from CUSTOMERS;
+
+6. List all data from table BRANCH.
+ANS: select * from BRANCH;
+
+7. Give account no and amount of depositors.
+ANS: select actno,amount from deposit;
+
+8. Give name of depositors having amount greater than Rs. 4000.
+ANS: select actno,amount from deposit where amount>4000;
+
+9. Give name of customers who opened account after date '01-DEC-96'.
+ANS: select cname from deposit where adate>'01-DEC-96';
+
+10.List all the customers from Bombay city.
+ANS: select * from customers where city='BOMBAY';

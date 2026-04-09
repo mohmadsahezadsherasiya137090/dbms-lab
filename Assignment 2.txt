@@ -1,0 +1,37 @@
+Assignment 2
+
+1 Create above Table name as item_master.
+ANS: create tbale item_master(id varchar2(2),name char(20),type char(20),price number(15),quality char(15),Item_pack_date date);
+
+2 Insert Data shown in table.
+ANS: insert into item_master values('&id','&name','&type',&price,'&quality','&Item_pack_date');
+
+3 Select information about price,quality and item_pack_date of the item.
+ANS: select price,quality,Item_pack_date from item_master;
+
+4 Display information about item.
+ANS: select * from item_master;
+
+5 Sort the item by its quality.
+ANS: select * from item_master order by quality;
+
+6 Display quality from table with distinct values.
+ANS: select distinct quality from item_master;
+
+7 Change the quality of item from Good to Verygood.
+ANS: update item_master set quality='verygood' where id='I5'
+
+8 Display item having quality Verygood.
+ANS: select * from item_master where quality='verygood';
+
+9 Add new columns item_pur_date into table.
+ANS: alter table item_master add (item_pur_date  date);
+
+10 Display all information of items having price more than Rs. 500.
+ANS: select * from item_master where price>500;
+
+11 Delete the item having price of Rs. 50.
+ANS: delete from item_master where price=50;
+
+12 Rename table from person to Item_detail.
+ANS: rename item_master to item_detil

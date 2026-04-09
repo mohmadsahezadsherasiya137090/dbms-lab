@@ -1,0 +1,35 @@
+Assignment 5
+
+1.Create above table with name Bank_Branch. 
+ANS: create table Bank_Branch(Branch_id varchar2(10),Branch_name char(15),Branch_Address char(20),Branch_City char(15),Branch_State char(15),Branch_Open_Date date);
+
+2. Insert given information into a table.
+ANS: insert into bank_branch values('&BRANCH_ID','&BRANCH_NAME','&BRANCH_ADDRESS','&BRANCH_CITY','&BRANCH_STATE','&BRANCH_OPEN_DATE')
+
+3. Display all information of Bank_Branch.
+ANS: select * from bank_branch;
+
+4. Display Branch_id of branch.
+ANS: select Branch_id from Bank_branch;
+
+5. Display Branch_id and Branch_address from Branch.
+ANS: select BRANCH_ADDRESS,branch_id from Bank_branch;
+
+6. Display Branch_name, Branch_addess and Branch_city from branch table.
+ANS: select BRANCH_ADDRESS,branch_id,branch_city from Bank_branch;
+
+7. Display Branch_city, Branch_state and Branch_open_date from Branch.
+ANS: select branch_state,Branch_open_date ,branch_city from Bank_branch;
+
+8. Sort table by Branch_id.
+ANS: select * from bank_branch order by Branch_id;
+
+9. Sort table by Branch_name.
+ANS: select * from bank_branch order by Branch_name;
+
+10.Sort table by Branch_city.
+ANS: select * from bank_branch order by Branch_city;
+
+11.Sort table by Branch_state.
+ANS: select * from bank_branch order by Branch_state;
+ 

@@ -1,0 +1,47 @@
+Assignment 7
+
+
+1. Retrieve all data from employee, jobs and deposit. 
+-->  SELECT * FROM employee;
+-->  SELECT * FROM jobs;
+-->  SELECT * FROM deposit;
+
+2. Give details of account no. and deposited rupees of customers having
+account opened between dates 01-01-06 and 25-07-06.
+
+--> SELECT account_no, amount FROM deposit WHERE open_date BETWEEN '2006-01-01' AND '2006-07-25'; 
+
+3. Display all jobs with minimum salary is greater than 4000.
+
+--> SELECT * FROM jobs WHERE min_salary > 4000;
+
+4. Display name and salary of employee whose department no is 20. Give
+alias name to name of employee.
+
+--> SELECT emp_name AS Employee_Name, salary FROM employee WHERE dept_no = 20;
+
+5. Display employee number,name and department details of those
+employee whose department lies in(10,20).
+
+--> SELECT emp_no, emp_name, dept_noFROM employee WHERE dept_no IN (10,20);
+
+6. Display all employee whose name start with „A‟.
+
+--> SELECT * FROM employee WHERE emp_name LIKE 'A%';
+
+7. Display all employee whose third character is „a‟.
+
+--> SELECT * FROM employee WHERE emp_name LIKE '__a%';
+
+8. Display all employee whose name start with „A‟ and third character is „a‟
+
+--> SELECT * FROM employee WHERE emp_name LIKE 'A_a%';
+
+9. Display name, number and salary of those employees whose name is 5
+characters long and first three characters are „Ani‟.
+
+--> SELECT emp_name, emp_no, salary FROM employee WHERE emp_name LIKE 'Ani__';
+
+10.Sort and display the names of customers from deposit table.
+
+-->SELECT cust_name FROM deposit ORDER BY cust_name;

@@ -1,0 +1,37 @@
+Assignment 3
+
+1. Create above Table name as Cust_master.
+ANS: create table Cust_master(Cust_no varchar2(4),Cust_name char(20),Address1 char(20),Address2 char(20),City char(25),State char(20),Ph_no number(10));
+
+2. Insert Data shown in table.
+ANS:  insert into Cust_master values('&cust_no','&Cust_name','&address1','&address2','&city','&state',&ph_no);
+
+3. Select information about all customers.
+ANS:  select * from Cust_master;
+
+4. Display the list of customers belonging to “Gujarat” state.
+ANS: select * from Cust_master where state='Gujarat';
+
+5. Sort the customer by their customer name.
+ANS: select * from Cust_master order by Cust_name;
+
+6. Display city from table with distinct values.
+ANS: select distinct CITy from Cust_master;
+
+7. Change the address1 of priya from “Ring Road‟ to “CG Road‟.
+ANS:  update Cust_master set city='CG ROAD' where Cust_name='Priya';
+
+8. Display city of customer whose state is Gujarat.
+ANS: select city from Cust_master where state='Gujarat';
+
+9. Add new column pin_code into cust_master table.
+ANS: alter table Cust_master add(pin_code number(20));
+
+10.Drop column pin_code from table.
+ANS: alter table Cust_master drop column pin_code;
+
+11.Delete the customer having ph_no value '7898452034‟.
+ANS: delete from Cust_master where ph_no=7898452034;
+
+12.Rename table from cust_master to customer_detail.
+ANS: rename Cust_master to customer_detail;

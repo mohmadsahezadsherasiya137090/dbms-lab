@@ -1,0 +1,63 @@
+Assignment 8
+
+
+1. List total deposit from deposit. 
+
+--> SELECT SUM(amount) AS total_deposit FROM deposit;
+
+2. List total loan from karolbagh branch.
+
+--> SELECT SUM(loan_amount) AS total_loan FROM loan WHERE branch = 'Karol Bagh';
+
+3. Give maximum loan from branch vrce.
+
+--> SELECT MAX(loan_amount) AS max_loan FROM loan WHERE branch = 'VRCE';
+
+4. Count total number of customers .
+
+--> SELECT COUNT(*) AS total_customers FROM customer;
+
+5. Count total number of customer‟s cities.
+
+--> SELECT COUNT(DISTINCT city) AS total_cities FROM customer;
+
+6. Create table supplier from employee with all the columns.
+
+--> CREATE TABLE supplier AS SELECT * FROM employee;
+
+7. Create table sup1 from employee with first two columns.
+
+--> CREATE TABLE sup1 AS SELECT emp_no, emp_name FROM employee;
+
+8. Create table sup2 from employee with no data.
+
+--> CREATE TABLE sup2 AS SELECT * FROM employee WHERE 1=0;
+
+9. Insert the data into sup2 from employee whose second character should be „n‟ and string
+should be 5 characters long in employee name field.
+
+--> INSERT INTO sup2 SELECT * FROM employee WHERE SUBSTR(emp_name,2,1) = 'n' AND LENGTH(emp_name) = 5;
+
+10.Delete all the rows from sup1.
+
+--> DELETE FROM sup1;
+
+11.Delete the detail of supplier whose sup_no is 103.
+
+--> DELETE FROM supplier WHERE sup_no = 103;
+
+12.Rename the table sup2 to suplier_two.
+
+--> ALTER TABLE sup2 RENAME TO suplier_two;
+
+13.Destroy table sup1 with all the data.
+
+--> DROP TABLE sup1;
+
+14.Update the value dept_no to 10 where second character of emp. name is „m‟.
+
+--> UPDATE employee SET dept_no = 10 WHERE SUBSTR(emp_name,2,1) = 'm';
+
+15.Update the value of employee name whose employee number is 103
+
+--> UPDATE employee SET emp_name = '&new_emp_name' WHERE emp_no = 103;
